@@ -1,4 +1,16 @@
 # dv
+7
+---
+- name: Install htop system monitor tool
+  hosts: local
+  become: true
+
+  tasks:
+    - name: Install htop package
+      ansible.builtin.package:
+        name: htop
+        state: present
+
 # dv 8
 --- 
 - name: Deploy JAR 
